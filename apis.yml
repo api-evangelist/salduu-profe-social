@@ -1,8 +1,29 @@
 aid: salduu-profe-social
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/salduu-profe-social.png
 name: Salduu (Profe Social)
-description: Salduu (Profe Social) is a company surfaced as a portfolio company of 500-global and added
-  to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  Salduu, operating as Profe Social at profe.social, is a 500 Global-backed
+  social networking platform. The live host serves Mastodon's default robots.txt
+  (Disallow /search, sitemap.xml.gz) and a Ruby on Rails error stack, indicating
+  the platform runs on Mastodon / ActivityPub fediverse technology, so it exposes
+  the standard Mastodon client REST API and ActivityPub federation endpoints
+  under /api. Both the site and its API surface sit behind a Cloudflare managed
+  challenge, so the instance's own instance metadata, OpenAPI, and developer
+  pages could not be retrieved by a non-browser client during enrichment. This
+  profile records what was directly observed via DNS/TLS/HTTP and well-known
+  probes; the API contract itself remains to be captured once the challenge is
+  cleared or the provider publishes a spec.
 url: https://raw.githubusercontent.com/api-evangelist/salduu-profe-social/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,9 +33,15 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
+- Social
+- Social Networking
+- Fediverse
+- Mastodon
+- ActivityPub
+- Education
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -22,5 +49,12 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/salduu-profe-social-domain-security.yml
 - type: Website
   url: https://profe.social
+x-enrichment:
+  date: '2026-07-21'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v1

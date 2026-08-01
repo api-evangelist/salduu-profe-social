@@ -1,0 +1,26 @@
+generated: '2026-07-21'
+method: searched
+source: live probes of https://profe.social/.well-known/*
+host: https://profe.social
+note: >-
+  All standard discovery documents probed returned 404 (no security.txt,
+  OIDC, OAuth authorization-server metadata, api-catalog, or ai-plugin.json
+  published). The host is a Rails/Mastodon-style fediverse application and the
+  interactive API surface (/api/*) sits behind a Cloudflare managed challenge,
+  so it could not be retrieved with a non-browser client. Absence recorded as
+  valid data; no 200 document was captured.
+documents:
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/openid-configuration
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
+- path: /.well-known/nodeinfo
+  status: 404
+- path: /.well-known/host-meta
+  status: 404
